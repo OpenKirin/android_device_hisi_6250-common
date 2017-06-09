@@ -8,6 +8,7 @@ on property:ro.board.platform=hi6250
 
 on fs
     start volisnotd
+    mount ext4 /dev/block/bootdevice/by-name/vendor /vendor ro nosuid nodev
 
 service teecd /sbin/teecd
     user root
